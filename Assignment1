@@ -1,0 +1,80 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+var x = 10;
+var changeInX = 3;
+
+var a = 10;
+var changeInA = 7;
+
+var b = 10;
+var changeInB = 40;
+
+
+function draw() {
+  background(220);
+  
+  ellipse(x, 200, 50);
+  
+  x = x + changeInX;
+	
+	if (x > 200) {
+    fill(255, 0, 0);
+  }
+  
+	if (x < 200) {
+    fill(0, 0, 255);
+  }
+
+	
+  if (x > width) {
+    changeInX = -3;
+  }
+  
+  if (x < 0) {
+    changeInX = 3;
+  }
+	
+	 ellipse(a, 300, 20);
+  
+  a = a + changeInA;
+	
+	if (a > 200) {
+    fill(255, 0, 0);
+  }
+  
+	if (a < 200) {
+    fill(0, 255, 255);
+  }
+	
+	 if (a > width) {
+    changeInA = -20;
+  }
+	
+	if (a < 0) {
+    changeInA = 7;
+  }
+	
+	 ellipse(b, 100, 50);
+  
+  b = b + changeInB;
+	
+	if (b > 200) {
+    fill(255, 0, 0);
+  }
+  
+	if (b < 200) {
+    fill(0, 0, 255);
+  }
+
+	
+  if (b > width) {
+    changeInB = -50;
+  }
+  
+  if (b < 0) {
+    changeInB = 50;
+  }
+
+}
